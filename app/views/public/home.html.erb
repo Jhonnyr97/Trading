@@ -1,0 +1,33 @@
+<h1>Public#home</h1>
+<p>Find me in app/views/public/home.html.erb</p>
+budget: <%= @budget %>
+<br>
+Quantity btc :  <%= @btc_quantity %>
+<br>
+Value btc :  <%= @btc_value %>
+<br>
+Valore totale : <%= @total_value %>
+<br><br>
+
+
+<table>
+  <tr>
+    <th>Amount</th>
+    <th>Quantity</th>
+    <th>Type_action</th>
+    <th>Price</th>
+    <th>Created_at</th>
+  </tr>
+
+    <%@transaction_all.each do |transaction| %>
+    <tr>
+      <td><%= transaction.amount %></td>
+      <td><%= transaction.quantity %></td>
+      <td><%= transaction.type_action %></td>
+      <td><%= transaction.price %></td>
+      <td><%= transaction.created_at %></td>
+    </tr>
+
+<% end %>
+
+</table>

@@ -1,0 +1,4 @@
+:schedule:
+  binance_worker:
+    cron: '0 */15 * * * *'   # Runs once per minute
+    class: BinanceWorker
